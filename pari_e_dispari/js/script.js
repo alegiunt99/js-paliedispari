@@ -34,21 +34,16 @@ function chooseANumber(oneToFive) {
     const number = parseInt(prompt(oneToFive));
 
 
-    // se è un numero
-    if (!isNaN(number)) {
-        
-        console.log('è un numero');
+    // controllo che sia un numero
+    if (!isNaN(number)) { // se è un numero
 
-        // se è minore o uguale a 5
+        // controllo che sia minore o uguale a 5
         if (number <= 5) {
 
             console.log("il numero dell'utente è", number)
             // svolgi la funzione 
             return number
-
-            
         }
-        
 
     } else {
                 
@@ -70,7 +65,50 @@ function fiveRandomNumbers(max) {
 
     const randomNumbersGen = Math.floor(Math.random() * 5) + 1;
 
-    return randomNumbersGen
+     // controllo che sia un numero
+     if (!isNaN(randomNumbersGen)) { // se è un numero
+
+        // controllo che sia minore o uguale a 5
+        if (randomNumbersGen <= 5) {
+
+            // svolgi la funzione 
+            return randomNumbersGen
+        }
+
+    } else {
+                
+        console.log('NON è un numero');
+    }
 
 } 
 console.log('il numero del computer è', randomNumbersCPU)
+
+
+// sommo i 2 numeri
+
+const sommaNumeri = addictionNumbers(randomNumbersCPU, userNumber);
+
+function addictionNumbers(numero1, numero2) {
+
+    const somma = numero1 + numero2;
+
+    return somma;
+
+}
+
+console.log('la somma dei 2 numeri è:', sommaNumeri)
+
+// controllo se la somma è pari o dispari
+
+const sommaPoD = numberOddOrEven(sommaNumeri);
+
+function numberOddOrEven(operazione) {
+
+    if (operazione % 2 === 0) {
+
+        console.log('la somma è pari');
+    } else if (operazione % 2 === 1); {
+
+        console.log('la somma è dispari')
+    }
+}
