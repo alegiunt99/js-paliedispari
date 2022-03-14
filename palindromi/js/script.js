@@ -12,15 +12,6 @@ function userWriteWord(message) {
     return createWord
 }
 
-
-const userWord = userWriteWord('Inserisci una parola');
-
-console.log(userWord);
-
-const palindromeOrNot = checkPalindrome(userWord);
-
-console.log(palindromeOrNot);
-
 // ora devo creare una funzione che mi permetta di capire se la parola è palindroma
 
 function checkPalindrome(string) {
@@ -35,10 +26,20 @@ function checkPalindrome(string) {
         //controllo se le due metà della stringa sono uguali
         if (string[i] !== string[stringLength - 1 - i]) { // se la prima metà e l'altra sono diversi
 
-            return 'NON è un palindromo';
+            return `${string} NON è un palindromo`;
         }
     }
     // una volta usciti dal ciclo, ho la certezza di avere un polindromo
     
-    return 'è un palindromo';
+    return `${string} è un palindromo`;
 }
+
+// chiamo la funzione che serve per far inserire una parola all'utente
+const userWord = userWriteWord('Inserisci una parola');
+
+
+// chiamo la funzione che verifichi se la parola sia palindroma o meno
+const palindromeOrNot = checkPalindrome(userWord);
+
+console.log(palindromeOrNot);
+
