@@ -22,6 +22,30 @@ function oddOrEvenChoice(message) {
 console.log(userEvenOrOdd);
 
 
+// se il valore che ha scritto l'utente è 'pari'
+
+if (userEvenOrOdd.value === 'Pari') {
+
+    if (sommaNumeri % 2 === 0) {
+        console.log("Ha vinto l'user!")
+    } else if (sommaNumeri % 2 === 1) {
+        console.log("Ha vinto il computer")
+    }
+
+}
+
+
+
+if (userEvenOrOdd.value === 'Dispari') {
+    
+    if (sommaNumeri % 2 === 1) {
+        console.log("Ha vinto l'user!")
+    } else if (sommaNumeri % 2 === 0) {
+        console.log("Ha vinto il computer")
+    }
+}
+
+
 // chiamo la funzione per far scrivere all'utente un numero da 1 a 5
 
 const userNumber = chooseANumber('scrivi un numero da 1 a 5');
@@ -107,8 +131,16 @@ function numberOddOrEven(operazione) {
     if (operazione % 2 === 0) {
 
         console.log('la somma è pari');
-    } else if (operazione % 2 === 1); {
+
+        return 'Pari';
+    } 
+    
+    else (operazione % 2 === 1); {
 
         console.log('la somma è dispari')
+
+        return 'Dispari';
     }
 }
+
+
